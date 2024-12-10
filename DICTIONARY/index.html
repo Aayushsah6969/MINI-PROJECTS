@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Meaning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">Dictionary</h1>
+        <div class="inputs" id="inputs">
+            <input type="text" id="inputword" placeholder="Enter a word">
+            <button id="search">Search</button>
+        </div>
+        
+            <div class="sound" id="sound">
+                <img src="horn.svg" alt="audio">
+            </div>
+ 
+        <div class="outputs" id="outputs">
+            <h2>Result:</h2>
+            <div class="result" id="result" style="text-align: left;">
+                <div class="def">
+                    <h3>Definition:</h3>
+                    <div id="definition"></div>
+                </div>
+                <div class="sys">
+                    <h3>Synonyms:</h3>
+                    <div id="synonyms"></div>
+                </div>
+                <div class="ayn">
+                    <h3>Antonyms:</h3>
+                    <div id="antonyms"></div>
+                </div>
+                <!-- <h3>Parts Of Speech:</h3><div id="antonyms"></div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+
+</body>
+
+</html>

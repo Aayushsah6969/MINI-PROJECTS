@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: #4140407b; */
+    font-family: sans-serif;
+}
+.redbrd{
+    border: 2px solid red;
+}
+.container{
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    /* margin-top: 10vh; */
+    border: 2px solid red;
+    backdrop-filter: blur(20px);
+
+    background-image:url(https://th.bing.com/th/id/OIP.1Gd1A3gt9TCEq451W3SwUwHaE8?w=244&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.search{
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+    margin: 10px;
+    margin-top: 25px;
+    position: relative;
+}
+input{
+    width: 85%;
+    height: 45px;
+    margin: auto;
+    outline: none;
+    background-color: aliceblue;
+    border: none;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding-left: 15px;
+    font-size: 20px;
+}
+input::placeholder{
+    /* margin-left: 20px; */
+    position: absolute;
+  left: 15px;
+}
+.search button img{
+    /* background-color:transparent; */
+    width: 20px;
+    background-color: transparent;
+}
+.search button{
+    background-color: aliceblue;
+    border-radius:50%;
+    border: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+.temp, .cityname{
+    color: rgb(255, 255, 255);
+}
+.overview{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.overview img{
+    width: 150px;
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    margin-top: 20vh;
+}
+.humidity, .wind{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+    color: white;
+}
+.humidity img{
+    width: 50px;
+}
+.wind img{
+    width: 50px;
+}
+@media only screen and (max-width:420px){
+    .container{
+        margin-top: 10px;
+        width: 100vw;
+        height: auto;
+    }
+    .temp, .cityname{
+        margin: 10px;
+    }
+    #windspeed, #humidity{
+        margin: 10px;
+    }
+    .details{
+        margin-top: 20px;
+    }
+}
+.day-date{
+    margin-left:50%;
+    margin-right: 50%;
+    color: white;
+    margin-top: 5vh;
+}
+.pressure img{
+    width: 50px;
+    transform: rotate(270deg);
+}
+.pressure{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}

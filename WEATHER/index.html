@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="Enter city" id="inputcity" value="kathmandu">
+            <button id="search"><img src="./images/search.png" alt="Search"></button>
+        </div>
+
+        <div class="day-date">
+            <p id="day">Day</p>
+            <p id="date">Date</p>
+        </div>
+
+        <div class="overview ">
+            <div class="image" id="image">
+                <img id="myimage"  src="./images/clear.png" alt="weather">
+            </div>
+            <div><h2 id="state" style="color: whitesmoke;">Weather</h2></div>
+            <h1> <span id="temp" class="temp">0</span><span style="color: whitesmoke;">°C</span></h1>
+            <h2 id="cityname" class="cityname">City</h2>
+        </div>
+
+        <div class="details ">
+            <div class="humidity">
+                <img src="./images/humidity.png" alt="humidity">
+              <span>
+                <span id="humidity">0</span><span>%</span>
+              </span>
+                <span>Humidity</span>
+            </div>
+
+            <div class="pressure">
+                <img src="./images/wind.png" alt="pressure-img">
+                <span id="pres">0</span>
+                <p>Pressure</p>
+            </div>
+
+            <div class="wind">
+                <img src="./images/wind.png" alt="">
+                <span>
+                    <span id="windspeed">0</span> <span>KmPh</span>
+                </span>
+                <span>Wind Speed</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

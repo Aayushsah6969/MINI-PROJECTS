@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+
+    <label for="textInput">Enter text:</label>
+    <input type="text" id="textInput" placeholder="Enter text">
+    <button onclick="generateQRCode()">Generate QR Code</button>
+
+    <div id="result"></div>
+
+    <button id="downloadBtn" style="display: none;" onclick="downloadQRCode()">Download QR Code</button>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+        function generateQRCode() {
+            var textInput = document.getElementById('textInput').value;
+            var resultContainer = document.getElementById('result');
+            var downloadBtn = document.getElementById('downloadBtn');
+
+            if (textInput.trim() !== "") {
+                resultContainer.innerHTML = "";
+                var qrcode = new QRCode(resultContainer, {
+                    text: textInput,
+                    width: 128,
+                    height: 128
+                });
+
+                downloadBtn.style.display = 'block';
+            } else {
+                alert('Please enter text before generating the QR code.');
+            }
+        }
+
+        function downloadQRCode() {
+            var resultContainer = document.getElementById('result');
+            var canvas = resultContainer.querySelector('canvas');
+            
+            // Create an anchor element and simulate a click to trigger the download
+            var downloadLink = document.createElement('a');
+            downloadLink.href = canvas.toDataURL("image/png");
+            downloadLink.download = 'qrcode.png';
+            downloadLink.click();
+        }
+    </script>
+</body>
+</html>
